@@ -15,27 +15,28 @@
 
         body{
             font-family:Arial, Helvetica, sans-serif;
-            background:linear-gradient(135deg,#ffeef6,#edf5ff,#d9ecff);
+            background:linear-gradient(180deg,#6f6f6f,#8d8d8d,#b5b5b5,#d7d7d7);
             min-height:100vh;
         }
 
         h1{
             text-align:center;
-            color:#fff;
-            font-size:60px;
+            color:white;
+            font-size:62px;
+            letter-spacing:2px;
             padding-top:35px;
-            text-shadow:3px 3px 8px rgba(0,0,0,.35);
+            text-shadow:4px 4px 12px rgba(0,0,0,.45);
             animation:aparecer 1s ease;
         }
 
         .descricao{
             text-align:center;
-            color:white;
-            font-size:22px;
-            margin:15px auto 40px;
-            text-shadow:2px 2px 5px rgba(0,0,0,.3);
+            color:#f5f5f5;
+            font-size:23px;
             max-width:900px;
+            margin:15px auto 45px;
             padding:0 20px;
+            text-shadow:2px 2px 6px rgba(0,0,0,.35);
         }
 
         .galeria{
@@ -45,25 +46,26 @@
             flex-wrap:wrap;
             justify-content:center;
             gap:35px;
-            padding:25px;
+            padding:30px;
         }
 
         .card{
             position:relative;
-            background:white;
-            border-radius:22px;
+            background:#fafafa;
+            border-radius:24px;
             overflow:hidden;
-            box-shadow:0 15px 35px rgba(0,0,0,.20);
-            transition:.4s;
+            border:2px solid rgba(255,255,255,.35);
+            box-shadow:0 20px 40px rgba(0,0,0,.28);
+            transition:.45s;
             animation:subir .8s ease;
         }
 
         .card:hover{
-            transform:translateY(-12px) scale(1.02);
-            box-shadow:0 25px 45px rgba(0,0,0,.35);
+            transform:translateY(-15px) scale(1.03);
+            box-shadow:0 35px 60px rgba(0,0,0,.38);
         }
 
-        /* brilho passando pelo card */
+        /* Brilho passando pelo card */
 
         .card::after{
             content:"";
@@ -79,7 +81,7 @@
                 transparent
             );
             transform:skewX(-20deg);
-            transition:.7s;
+            transition:.8s;
         }
 
         .card:hover::after{
@@ -87,29 +89,31 @@
         }
 
         .card img{
-            width:650px;
+            width:700px;
             max-width:100%;
             display:block;
-            transition:.4s;
+            transition:.45s;
         }
 
         .card img:hover{
-            transform:scale(1.07);
+            transform:scale(1.05);
         }
 
         .nome{
             text-align:center;
             font-size:28px;
-            padding:18px;
             color:#555;
+            padding:18px;
+            letter-spacing:2px;
         }
 
         footer{
-            margin-top:40px;
+            margin-top:60px;
             padding:30px;
             text-align:center;
             color:white;
             font-size:18px;
+            border-top:1px solid rgba(255,255,255,.25);
             text-shadow:2px 2px 5px rgba(0,0,0,.4);
         }
 
@@ -167,10 +171,10 @@
 
 <body>
 
-    <h1>𝗖𝘂𝗿𝗶𝗼𝘀𝗶𝗱𝗮𝗱𝗲𝘀 𝘀𝗼𝗯𝗿𝗲 𝗴𝗮𝘁𝗼𝘀</h1>
+    <h1> 𝗖𝘂𝗿𝗶𝗼𝘀𝗶𝗱𝗮𝗱𝗲𝘀 𝘀𝗼𝗯𝗿𝗲 𝗴𝗮𝘁𝗼𝘀 </h1>
 
     <p class="descricao">
-       𝙳𝚎𝚜𝚌𝚞𝚋𝚛𝚊 𝚌𝚞𝚛𝚒𝚘𝚜𝚒𝚍𝚊𝚍𝚎𝚜 𝚒𝚗𝚌𝚛𝚒́𝚟𝚎𝚒𝚜 𝚜𝚘𝚋𝚛𝚎 𝚘𝚜 𝚐𝚊𝚝𝚘𝚜 𝚊𝚝𝚛𝚊𝚟𝚎́𝚜 𝚍𝚊𝚜 𝚒𝚖𝚊𝚐𝚎𝚗𝚜 𝚊𝚋𝚊𝚒𝚡𝚘
+        𝙳𝚎𝚜𝚌𝚞𝚋𝚛𝚊 𝚌𝚞𝚛𝚒𝚘𝚜𝚒𝚍𝚊𝚍𝚎𝚜 𝚒𝚗𝚌𝚛𝚒́𝚟𝚎𝚒𝚜 𝚜𝚘𝚋𝚛𝚎 𝚘𝚜 𝚐𝚊𝚝𝚘𝚜 𝚊𝚝𝚛𝚊𝚟𝚎́𝚜 𝚍𝚊𝚜 𝚒𝚖𝚊𝚐𝚎𝚗𝚜 𝚊𝚋𝚊𝚒𝚡𝚘.
     </p>
 
     <div class="galeria">
@@ -208,7 +212,7 @@
     </div>
 
     <footer>
-      𝙵𝚎𝚒𝚝𝚘 𝚌𝚘𝚖 𝚌𝚊𝚛𝚒𝚗𝚑𝚘 𝚙𝚊𝚛𝚊 𝚝𝚘𝚍𝚘𝚜 𝚚𝚞𝚎 𝚊𝚖𝚊𝚖 𝚐𝚊𝚝𝚘𝚜
+        𝙵𝚎𝚒𝚝𝚘 𝚌𝚘𝚖 𝚌𝚊𝚛𝚒𝚗𝚑𝚘 𝚙𝚊𝚛𝚊 𝚝𝚘𝚍𝚘𝚜 𝚚𝚞𝚎 𝚊𝚖𝚊𝚖 𝚐𝚊𝚝𝚘𝚜 
     </footer>
 
 </body>
