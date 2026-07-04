@@ -4,9 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Curiosidades sobre Gatos</title>
+
+    <title>Curiosidades sobre Gatos</title>
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
+
         *{
             margin:0;
             padding:0;
@@ -14,119 +21,146 @@
         }
 
         body{
-            font-family:Arial, Helvetica, sans-serif;
-            background:linear-gradient(180deg,#6f6f6f,#8d8d8d,#b5b5b5,#d7d7d7);
+            font-family:'Poppins',sans-serif;
             min-height:100vh;
+            background:linear-gradient(
+                to bottom,
+                #595959,
+                #747474,
+                #969696,
+                #bfbfbf
+            );
         }
 
         h1{
             text-align:center;
             color:white;
-            font-size:62px;
+            font-size:60px;
+            font-weight:700;
             letter-spacing:2px;
-            padding-top:35px;
-            text-shadow:4px 4px 12px rgba(0,0,0,.45);
-            animation:aparecer 1s ease;
+            margin-top:40px;
+            text-shadow:0 5px 15px rgba(0,0,0,.45);
+            animation:titulo 1s ease;
         }
 
         .descricao{
             text-align:center;
-            color:#f5f5f5;
-            font-size:23px;
-            max-width:900px;
-            margin:15px auto 45px;
+            color:#f3f3f3;
+            font-size:20px;
+            max-width:700px;
+            margin:20px auto 50px;
+            line-height:1.7;
+            text-shadow:2px 2px 5px rgba(0,0,0,.35);
             padding:0 20px;
-            text-shadow:2px 2px 6px rgba(0,0,0,.35);
         }
 
         .galeria{
             max-width:1900px;
             margin:auto;
             display:flex;
-            flex-wrap:wrap;
             justify-content:center;
-            gap:35px;
-            padding:30px;
+            flex-wrap:wrap;
+            gap:45px;
+            padding:25px;
         }
 
         .card{
             position:relative;
             background:#fafafa;
-            border-radius:24px;
+            border-radius:30px;
             overflow:hidden;
-            border:2px solid rgba(255,255,255,.35);
-            box-shadow:0 20px 40px rgba(0,0,0,.28);
+            border:2px solid rgba(255,255,255,.25);
+            box-shadow:0 20px 45px rgba(0,0,0,.28);
             transition:.45s;
-            animation:subir .8s ease;
+            animation:subir .8s ease both;
         }
 
         .card:hover{
-            transform:translateY(-15px) scale(1.03);
-            box-shadow:0 35px 60px rgba(0,0,0,.38);
+            transform:translateY(-12px);
+            box-shadow:0 35px 65px rgba(0,0,0,.4);
         }
 
-        /* Brilho passando pelo card */
-
         .card::after{
+
             content:"";
+
             position:absolute;
+
             top:0;
             left:-120%;
-            width:70%;
+
+            width:60%;
             height:100%;
+
             background:linear-gradient(
                 120deg,
                 transparent,
-                rgba(255,255,255,.55),
+                rgba(255,255,255,.45),
                 transparent
             );
+
             transform:skewX(-20deg);
+
             transition:.8s;
+
         }
 
         .card:hover::after{
+
             left:150%;
+
         }
 
         .card img{
+
             width:700px;
             max-width:100%;
             display:block;
-            transition:.45s;
+            transition:.4s;
+
         }
 
         .card img:hover{
-            transform:scale(1.05);
+
+            transform:scale(1.04);
+
         }
 
         .nome{
+
             text-align:center;
-            font-size:28px;
-            color:#555;
+            font-size:26px;
+            color:#666;
             padding:18px;
-            letter-spacing:2px;
+            letter-spacing:3px;
+
         }
 
         footer{
-            margin-top:60px;
-            padding:30px;
+
+            margin-top:70px;
             text-align:center;
             color:white;
-            font-size:18px;
-            border-top:1px solid rgba(255,255,255,.25);
-            text-shadow:2px 2px 5px rgba(0,0,0,.4);
+            padding:35px;
+            font-size:17px;
+            border-top:1px solid rgba(255,255,255,.2);
+
         }
 
-        @keyframes aparecer{
+        @keyframes titulo{
 
             from{
+
                 opacity:0;
-                transform:translateY(-30px);
+                transform:translateY(-35px);
+
             }
 
             to{
+
                 opacity:1;
                 transform:translateY(0);
+
             }
 
         }
@@ -134,13 +168,17 @@
         @keyframes subir{
 
             from{
+
                 opacity:0;
                 transform:translateY(60px);
+
             }
 
             to{
+
                 opacity:1;
                 transform:translateY(0);
+
             }
 
         }
@@ -148,19 +186,29 @@
         @media(max-width:900px){
 
             h1{
+
                 font-size:42px;
+                padding:0 15px;
+
             }
 
             .descricao{
-                font-size:18px;
+
+                font-size:17px;
+
             }
 
             .card img{
+
                 width:100%;
+
             }
 
             .galeria{
+
+                gap:25px;
                 padding:15px;
+
             }
 
         }
@@ -171,10 +219,10 @@
 
 <body>
 
-    <h1> 𝗖𝘂𝗿𝗶𝗼𝘀𝗶𝗱𝗮𝗱𝗲𝘀 𝘀𝗼𝗯𝗿𝗲 𝗴𝗮𝘁𝗼𝘀 </h1>
+    <h1>Curiosidades sobre gatos</h1>
 
     <p class="descricao">
-        𝙳𝚎𝚜𝚌𝚞𝚋𝚛𝚊 𝚌𝚞𝚛𝚒𝚘𝚜𝚒𝚍𝚊𝚍𝚎𝚜 𝚒𝚗𝚌𝚛𝚒́𝚟𝚎𝚒𝚜 𝚜𝚘𝚋𝚛𝚎 𝚘𝚜 𝚐𝚊𝚝𝚘𝚜 𝚊𝚝𝚛𝚊𝚟𝚎́𝚜 𝚍𝚊𝚜 𝚒𝚖𝚊𝚐𝚎𝚗𝚜 𝚊𝚋𝚊𝚒𝚡𝚘.
+        Descubra curiosidades interessantes sobre os gatos através das imagens abaixo.
     </p>
 
     <div class="galeria">
@@ -212,7 +260,7 @@
     </div>
 
     <footer>
-        𝙵𝚎𝚒𝚝𝚘 𝚌𝚘𝚖 𝚌𝚊𝚛𝚒𝚗𝚑𝚘 𝚙𝚊𝚛𝚊 𝚝𝚘𝚍𝚘𝚜 𝚚𝚞𝚎 𝚊𝚖𝚊𝚖 𝚐𝚊𝚝𝚘𝚜 
+        Feito com carinho para todos que amam gatos.
     </footer>
 
 </body>
