@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria de Gatos </title>
+    <title>🐱 Curiosidades sobre Gatos</title>
 
     <style>
         *{
@@ -15,76 +15,140 @@
 
         body{
             font-family:Arial, Helvetica, sans-serif;
-            background:linear-gradient(180deg,#dcdcdc,#9f9f9f);
+            background:linear-gradient(135deg,#ffeef6,#edf5ff,#d9ecff);
             min-height:100vh;
         }
 
         h1{
             text-align:center;
-            color:white;
+            color:#fff;
             font-size:60px;
-            padding:30px;
-            text-shadow:3px 3px 8px rgba(0,0,0,.5);
-            animation: aparecer 1s ease;
+            padding-top:35px;
+            text-shadow:3px 3px 8px rgba(0,0,0,.35);
+            animation:aparecer 1s ease;
+        }
+
+        .descricao{
+            text-align:center;
+            color:white;
+            font-size:22px;
+            margin:15px auto 40px;
+            text-shadow:2px 2px 5px rgba(0,0,0,.3);
+            max-width:900px;
+            padding:0 20px;
         }
 
         .galeria{
-            max-width:1800px;
+            max-width:1900px;
             margin:auto;
             display:flex;
             flex-wrap:wrap;
             justify-content:center;
-            gap:30px;
-            padding:30px;
+            gap:35px;
+            padding:25px;
         }
 
         .card{
+            position:relative;
             background:white;
-            border-radius:18px;
+            border-radius:22px;
             overflow:hidden;
-            box-shadow:0 10px 25px rgba(0,0,0,.25);
-            transition:.35s;
+            box-shadow:0 15px 35px rgba(0,0,0,.20);
+            transition:.4s;
+            animation:subir .8s ease;
         }
 
         .card:hover{
-            transform:translateY(-8px);
-            box-shadow:0 18px 35px rgba(0,0,0,.4);
+            transform:translateY(-12px) scale(1.02);
+            box-shadow:0 25px 45px rgba(0,0,0,.35);
+        }
+
+        /* brilho passando pelo card */
+
+        .card::after{
+            content:"";
+            position:absolute;
+            top:0;
+            left:-120%;
+            width:70%;
+            height:100%;
+            background:linear-gradient(
+                120deg,
+                transparent,
+                rgba(255,255,255,.55),
+                transparent
+            );
+            transform:skewX(-20deg);
+            transition:.7s;
+        }
+
+        .card:hover::after{
+            left:150%;
         }
 
         .card img{
-            width:550px;
+            width:650px;
             max-width:100%;
             display:block;
-            transition:.35s;
+            transition:.4s;
         }
 
         .card img:hover{
-            transform:scale(1.08);
+            transform:scale(1.07);
         }
 
         .nome{
             text-align:center;
-            font-size:22px;
-            font-weight:bold;
-            padding:15px;
-            color:#444;
+            font-size:28px;
+            padding:18px;
+            color:#555;
+        }
+
+        footer{
+            margin-top:40px;
+            padding:30px;
+            text-align:center;
+            color:white;
+            font-size:18px;
+            text-shadow:2px 2px 5px rgba(0,0,0,.4);
         }
 
         @keyframes aparecer{
+
             from{
                 opacity:0;
                 transform:translateY(-30px);
             }
+
             to{
                 opacity:1;
                 transform:translateY(0);
             }
+
         }
 
-        @media(max-width:700px){
+        @keyframes subir{
+
+            from{
+                opacity:0;
+                transform:translateY(60px);
+            }
+
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+
+        }
+
+        @media(max-width:900px){
 
             h1{
                 font-size:42px;
+            }
+
+            .descricao{
+                font-size:18px;
             }
 
             .card img{
@@ -96,46 +160,57 @@
             }
 
         }
+
     </style>
+
 </head>
 
 <body>
 
-    <h1>୨ৎ 𝒞𝓊𝓇𝒾ℴ𝓈𝒾𝒹𝒶𝒹ℯ𝓈 𝒢𝒶𝓉ℴ𝓈</h1>
+    <h1>୨ৎ 𝒞𝓊𝓇𝒾ℴ𝓈𝒾𝒹𝒶𝒹ℯ𝓈 𝒮ℴ𝒷𝓇ℯ 𝒢𝒶𝓉ℴ𝓈 🐈</h1>
+
+    <p class="descricao">
+        Descubra curiosidades incríveis sobre os gatos através das imagens abaixo.
+        Passe o mouse sobre elas para ver os efeitos. 🐾
+    </p>
 
     <div class="galeria">
 
         <div class="card">
-            <img src="foto1.jpg" alt="Gato 1">
-            <div class="nome">૮₍ ´ ꒳ `₎ა</div>
+            <img src="foto1.jpg" alt="Curiosidade sobre gatos">
+            <div class="nome">૮₍ ´ ꒳ ` ₎ა</div>
         </div>
 
         <div class="card">
-            <img src="2.jpg" alt="Gato 2">
-            <div class="nome">૮₍ ´ ꒳ `₎ა</div>
+            <img src="2.jpg" alt="Curiosidade sobre gatos">
+            <div class="nome">૮₍ ´ ꒳ ` ₎ა</div>
         </div>
 
         <div class="card">
-            <img src="3.jpg" alt="Gato 3">
-            <div class="nome">૮₍ ´ ꒳ `₎ა</div>
+            <img src="3.jpg" alt="Curiosidade sobre gatos">
+            <div class="nome">૮₍ ´ ꒳ ` ₎ა</div>
         </div>
 
         <div class="card">
-            <img src="4.jpg" alt="Gato 4">
-            <div class="nome">૮₍ ´ ꒳ `₎ა</div>
+            <img src="4.jpg" alt="Curiosidade sobre gatos">
+            <div class="nome">૮₍ ´ ꒳ ` ₎ა</div>
         </div>
 
         <div class="card">
-            <img src="6.jpg" alt="Gato 5">
-            <div class="nome">૮₍ ´ ꒳ `₎ა</div>
+            <img src="6.jpg" alt="Curiosidade sobre gatos">
+            <div class="nome">૮₍ ´ ꒳ ` ₎ა</div>
         </div>
 
         <div class="card">
-            <img src="7.jpg" alt="Gato 6">
-            <div class="nome">૮₍ ´ ꒳ `₎ა</div>
+            <img src="7.jpg" alt="Curiosidade sobre gatos">
+            <div class="nome">૮₍ ´ ꒳ ` ₎ა</div>
         </div>
 
     </div>
+
+    <footer>
+        🩷 Feito com carinho para todos que amam gatos 🐾
+    </footer>
 
 </body>
 
