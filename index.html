@@ -1,269 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
 
-<head>
+<html lang="pt-br">
+
+<head> <!-- cabeçalho da página-->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Curiosidades sobre Gatos</title>
-
-    <!-- Fonte -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <style>
-
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
-
-        body{
-            font-family:'Poppins',sans-serif;
-            min-height:100vh;
-            background:linear-gradient(
-                to bottom,
-                #595959,
-                #747474,
-                #969696,
-                #bfbfbf
-            );
-        }
-
-        h1{
-            text-align:center;
-            color:white;
-            font-size:60px;
-            font-weight:700;
-            letter-spacing:2px;
-            margin-top:40px;
-            text-shadow:0 5px 15px rgba(0,0,0,.45);
-            animation:titulo 1s ease;
-        }
-
-        .descricao{
-            text-align:center;
-            color:#f3f3f3;
-            font-size:20px;
-            max-width:700px;
-            margin:20px auto 50px;
-            line-height:1.7;
-            text-shadow:2px 2px 5px rgba(0,0,0,.35);
-            padding:0 20px;
-        }
-
-        .galeria{
-            max-width:1900px;
-            margin:auto;
-            display:flex;
-            justify-content:center;
-            flex-wrap:wrap;
-            gap:45px;
-            padding:25px;
-        }
-
-        .card{
-            position:relative;
-            background:#fafafa;
-            border-radius:30px;
-            overflow:hidden;
-            border:2px solid rgba(255,255,255,.25);
-            box-shadow:0 20px 45px rgba(0,0,0,.28);
-            transition:.45s;
-            animation:subir .8s ease both;
-        }
-
-        .card:hover{
-            transform:translateY(-12px);
-            box-shadow:0 35px 65px rgba(0,0,0,.4);
-        }
-
-        .card::after{
-
-            content:"";
-
-            position:absolute;
-
-            top:0;
-            left:-120%;
-
-            width:60%;
-            height:100%;
-
-            background:linear-gradient(
-                120deg,
-                transparent,
-                rgba(255,255,255,.45),
-                transparent
-            );
-
-            transform:skewX(-20deg);
-
-            transition:.8s;
-
-        }
-
-        .card:hover::after{
-
-            left:150%;
-
-        }
-
-        .card img{
-
-            width:700px;
-            max-width:100%;
-            display:block;
-            transition:.4s;
-
-        }
-
-        .card img:hover{
-
-            transform:scale(1.04);
-
-        }
-
-        .nome{
-
-            text-align:center;
-            font-size:26px;
-            color:#666;
-            padding:18px;
-            letter-spacing:3px;
-
-        }
-
-        footer{
-
-            margin-top:70px;
-            text-align:center;
-            color:white;
-            padding:35px;
-            font-size:17px;
-            border-top:1px solid rgba(255,255,255,.2);
-
-        }
-
-        @keyframes titulo{
-
-            from{
-
-                opacity:0;
-                transform:translateY(-35px);
-
-            }
-
-            to{
-
-                opacity:1;
-                transform:translateY(0);
-
-            }
-
-        }
-
-        @keyframes subir{
-
-            from{
-
-                opacity:0;
-                transform:translateY(60px);
-
-            }
-
-            to{
-
-                opacity:1;
-                transform:translateY(0);
-
-            }
-
-        }
-
-        @media(max-width:900px){
-
-            h1{
-
-                font-size:42px;
-                padding:0 15px;
-
-            }
-
-            .descricao{
-
-                font-size:17px;
-
-            }
-
-            .card img{
-
-                width:100%;
-
-            }
-
-            .galeria{
-
-                gap:25px;
-                padding:15px;
-
-            }
-
-        }
-
-    </style>
-
-</head>
-
-<body>
-
-    <h1>Curiosidades sobre gatos</h1>
-
-    <p class="descricao">
-        Descubra curiosidades interessantes sobre os gatos através das imagens abaixo.
-    </p>
-</h4>
-<a href = "https://yasmimoliveira07-bot.github.io/jornal1A/"
-    <div class="galeria">
-
-        <div class="card">
-            <img src="foto1.jpg" alt="Curiosidade sobre gatos">
-            <div class="nome">. ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁.</div>
-        </div>
-
-        <div class="card">
-            <img src="2.jpg" alt="Curiosidade sobre gatos">
-            <div class="nome">. ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁.</div>
-        </div>
-
-        <div class="card">
-            <img src="3.jpg" alt="Curiosidade sobre gatos">
-            <div class="nome">. ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁.</div>
-        </div>
-
-        <div class="card">
-            <img src="4.jpg" alt="Curiosidade sobre gatos">
-            <div class="nome">. ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁.</div>
-        </div>
-
-        <div class="card">
-            <img src="6.jpg" alt="Curiosidade sobre gatos">
-            <div class="nome">. ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁.</div>
-        </div>
-
-        <div class="card">
-            <img src="7.jpg" alt="Curiosidade sobre gatos">
-            <div class="nome">. ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁.</div>
-        </div>
-
-    </div>
-
-    <footer>
-        Feito com carinho para todos que amam gatos.
-    </footer>
-
-</body>
-
-</html>
+   
+    <title>Nome da Página</title> <!-- h1, h3, h3, h3, h4 indica o tamanho da letra -->
+
+    <link rel="stylesheet" href="style.css">
+   
+    <h1 align="center"><font color="#008080">NOME DA PÁGINA</font></h1>
+
+    <img src="https://user-images.githubusercontent.com/107090581/194202236-1b58b4d6-7d91-435f-967d-71915582a0ca.png&quot;
+         width="40px" height="40px" alt="Logotipo">
+</head> <!-- fim do cabeçalhoi -->
+
+<body bgcolor="Turquoise"> <!-- corpo  da página -->
+
+    <h5 align="right">Colocar nome dos integrantes</h5>
+
+    <h2 align="left"><b>conteúdo do dia</b></h2> <!-- título do contúdo -->
+   
+    <h4 align="justify">
+        <p> <!-- indica parágrafo -->
+            Promover empoderamento das capacidades intelectuais através da
+            <strong><b style="font-size:22px"><font color="#008080">programação</font></b></strong> <!-- indica o tamanho
+            da letra, fonte e cor, geralmente usado para destacar o texto -->
+            e proporcionar desenvolvimento nas habilidades tecnológicas...
+        </p>
+    </h4>
+
+    <h2 align="left"><b>explicação do conteúdo e/ou fonte da pesquisa</b></h2>
+    <h4 align="justify">
+        <p>Ampliar o atendimento educacional com cursos da plataforma alura.</p>
+    </h4>
+
+    <h2 align="left"><b> colocar informações do conteúdo</b></h2>
+    <h4 align="justify">
+        <p>Trabalhamos com adolescentes, acadêmicos e profissionais...</p>
+    </h4>
+
+    <h2 align="left"><b>informações do conteúdo</b></h2>
+    <h4 align="justify">
+        <p>Preparamos estudantes para atingir seu potencial educacional e tecnológico.</p>
+    </h4>
+
+    <h2 align="left"><b>informações do conteúdo</b></h2>
+    <h4 align="justify">
+        <p>Cursos de programação.</p>
+    </h4>
+
+    <footer align="center"> <!-- rodapé da página -->
+        <h5>colocar informações no rodapé... fonte, atualização....</h5>
+       
+        <p><a href="https://www.instagram.com/seu-perfil">Acesse nossas redes sociais</a></p> <!-- usado para endereços em redes sociais -->
+    </footer> <!-- fecha rodapé -->
+
+</body> <!-- fecha corpo da página -->
+</html> <!-- fecha página -->
